@@ -41,7 +41,7 @@ jobs:
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       - name: Backup Mongo DB
-        uses: vip20/mongo-atlas-backup@0.0.5
+        uses: vip20/mongo-atlas-backup@main
         with:
           mongodb_server: ${{ secrets.MONGODB_SERVER }}
           mongodb_user: ${{ secrets.MONGODB_USER }}
