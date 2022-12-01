@@ -1,0 +1,25 @@
+name: 'Backup MongoDB Atlas'
+description: 'Easy backup of the Database'
+author: 'Vinay P'
+
+inputs:
+  mongodb_server: 
+    description: 'Mongo DB Server URL'
+    required: true
+  mongodb_user: 
+    description: 'Mongo DB Username'
+    required: true
+  mongodb_pas: 
+    description: 'Mongo DB Password'
+    required: true
+  mongodb_name: 
+    description: 'Mongo DB Name'
+    required: true
+
+branding:
+  icon: 'archive'
+  color: 'gray-dark'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
