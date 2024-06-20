@@ -10,6 +10,12 @@ RUN apt-get install dpkg
 
 RUN wget -O mongo-tools.deb https://fastdl.mongodb.org/tools/db/mongodb-database-tools-debian12-x86_64-100.9.5.deb
 
+# Install dependencies for MongoDB Database Tools
+RUN apt-get install -y \
+    libk5crypto3 \
+    libkrb5support0 \
+    libkeyutils1
+
 RUN dpkg -i ./mongo-tools.deb
 
 ADD main.sh /main.sh
